@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Midterm_Assignment1_Login", "Midterm_Assignment1_Login.csproj", "{0F41419F-9F18-4497-8AAE-C9C4FECBE3EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Midterm_Assignment1_Login", "Midterm_Assignment1_Login.csproj", "{0F41419F-9F18-4497-8AAE-C9C4FECBE3EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38AAE602-6129-4D58-90FA-FDD272D7D642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
