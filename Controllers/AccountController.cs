@@ -55,19 +55,43 @@ namespace Midterm_Assignment1_Login.Controllers
             return View();
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> RegisterAsync(RegisterVm model)
+        public IActionResult Register(RegisterVm model)
         {
             if (!ModelState.IsValid)
+            {
                 return View(model);
+            }
 
-            var user = _userRepository.Register(model);
+            // Check if username is already taken (within current session)
+            if (HttpContext.Session.Keys.Contains(model.EmailAddress))
+            {
+                ModelState.AddModelError("Username", "Username is already taken.");
+                return View(model);
+            }
 
-            await _userManager.SignIn(HttpContext, user, isPersistent: false);
+            // Store username in session to ensure uniqueness
+            HttpContext.Session.SetString(model.EmailAddress, "registered");
 
-            return LocalRedirect("~/Home/Index");
+            // Optional: Add registration confirmation logic
+            TempData["Message"] = "Registration successful! Please login with your new credentials.";
+
+            return RedirectToAction("Login");
         }
+
+
+        //[HttpPost]
+        //public async Task<IActionResult> RegisterAsync(RegisterVm model)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return View(model);
+
+        //    var user = _userRepository.Register(model);
+
+        //    await _userManager.SignIn(HttpContext, user, isPersistent: false);
+
+        //    return LocalRedirect("~/Home/Index");
+        //}
 
         [HttpPost]
         public async Task<IActionResult> LogoutAsync()
@@ -76,5 +100,8 @@ namespace Midterm_Assignment1_Login.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+
+
     }
 }
