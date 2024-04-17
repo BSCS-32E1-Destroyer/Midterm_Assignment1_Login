@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Midterm_Assignment1_Login;
 
-namespace CookieReaders
+namespace Midterm_Assignment1_Login
 {
     public class Program
     {
