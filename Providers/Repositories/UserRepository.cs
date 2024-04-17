@@ -1,7 +1,7 @@
 ﻿using Midterm_Assignment1_Login.Models.Entities;
 using System.Collections.Generic;
 
-namespace CookieReaders.Providers.Repositories
+namespace Midterm_Assignment1_Login.Providers.Repositories
 {
     public interface IUserRepository
     {
