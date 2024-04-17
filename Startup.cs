@@ -28,7 +28,7 @@ namespace Midterm_Assignment1_Login
                 options.UseSqlite("Data Source=app.db");
             });
 
-            // Add any other service registrations you need
+            // Add any other service registrations 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
