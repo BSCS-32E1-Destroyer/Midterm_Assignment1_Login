@@ -1,4 +1,5 @@
 ﻿using Midterm_Assignment1_Login.Models.Entities;
+using Midterm_Assignment1_Login.Models;
 using System.Collections.Generic;
 
 namespace Midterm_Assignment1_Login.Providers.Repositories
