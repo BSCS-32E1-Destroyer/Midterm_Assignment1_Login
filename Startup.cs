@@ -23,6 +23,8 @@ namespace Midterm_Assignment1_Login
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
+
             services.AddControllersWithViews();
 
             services.AddScoped<IUserManager, UserManager>();
@@ -68,6 +70,8 @@ namespace Midterm_Assignment1_Login
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+            app.UseSession();
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
