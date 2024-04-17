@@ -1,4 +1,4 @@
-﻿@model Midterm_Assignment1_Login.Models.LoginVm
+﻿@model Midterm_Assignment1_Login.Models.ViewModels.LoginVm
 
 <h2>Login</h2>
 
@@ -8,7 +8,7 @@
         <label asp-for="EmailAddress"></label>
         <input asp-for="EmailAddress" class="form-control" />
         <span asp-validation-for="EmailAddress" class="text-danger"></span>
-   </div>
+    </div>
     <div class="form-group">
         <label asp-for="Password"></label>
         <input asp-for="Password" type="password" class="form-control" />

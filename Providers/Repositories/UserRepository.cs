@@ -1,7 +1,7 @@
-﻿using Midterm_Assignment1_Login.Models.Entities;
+﻿using Midterm_Assignment1_Login.Models.ViewModels;
+using Midterm_Assignment1_Login.Models.Entities;
 using Midterm_Assignment1_Login.Models;
 using System.Collections.Generic;
-using Midterm_Assignment1_Login.Models.ViewModels;
 
 namespace Midterm_Assignment1_Login.Providers.Repositories
 {
@@ -64,9 +64,5 @@ namespace Midterm_Assignment1_Login.Providers.Repositories
             };
         }
 
-        object IUserRepository.Register(RegisterVm model)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
